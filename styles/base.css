@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+
 * {
     font-family: sans-serif, serif; 
 }
@@ -30,7 +30,7 @@ nav a { /* Add the white in the letterinside top panle */
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 700;
-    font-family: 'Tiny5', serif; 
+    font-family: serif; 
 }
 
 nav a:hover {
@@ -59,7 +59,6 @@ img {
     float: right;
 }
 p { 
-    font-family: var(--paragraph-font);
     padding: 0;
 }
 footer {
@@ -68,13 +67,11 @@ footer {
     text-align: center;
 }
 .card h1{
-    font-family: var(--heading-font);
     color: #2b2400;
     border-bottom: 1px solid #2b2400;
 }
 
 .card h2{
-    font-family: var(--heading-font);
     color: #2b2400;
     border-bottom: 1px solid #2b2400;
 }
