@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-
 nav { /* Top panle */
     background-color: rgb(222, 184, 12);
     padding: 1rem;
@@ -23,7 +22,6 @@ nav a { /* Add the white in the letterinside top panle */
     background-color: #c6e1c1;
     color: #333;
     text-align: center;
-    position: relative;
     border-radius: 10px;
 }
 img {
@@ -51,6 +49,8 @@ footer {
 }
 
 main {
-    grid-column: 2/3;
     margin: 1rem;
+    align-items: center;
+    align-tracks: center;
+    max-width: 1900px;
 }
