@@ -38,7 +38,6 @@ nav a { /* Add the white in the letterinside top panle */
 nav a:hover {
     color: rgb(222, 184, 12);
     text-decoration: underline;
-    text-decoration: bold;
     
 }
 
@@ -81,6 +80,5 @@ footer {
 main {
     margin: 0 auto;
     align-items: center;
-    align-tracks: center;
     max-width: 800px;
 }
