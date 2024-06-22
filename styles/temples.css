@@ -1,4 +1,5 @@
-*{
+/* General styles */
+* {
     font-family: "Lato", sans-serif;
     font-weight: 400;
 }
@@ -13,20 +14,23 @@ h2 {
     text-align: center;
 }
 
+/* Center main element and set maximum width */
 main {
     max-width: 800px;
+    margin: 0 auto; /* Center horizontally */
 }
 
-main nav {
+/* Block display for nav inside main by default */
+.images {
     display: block;
 }
 
-
+/* Header styles */
 header nav {
     background-color: khaki;
     margin: 0 auto;
-
 }
+
 nav li {
     padding: 1rem;
     text-align: center;
@@ -34,14 +38,20 @@ nav li {
     text-decoration: none;
     list-style: none;
 }
+
 nav h1 {
     display: none;
+}
+
+nav a {
+    text-decoration: none;
 }
 
 nav a:hover {
     color: blue;
 }
 
+/* Media query for larger screens */
 @media (min-width: 640px) {
     nav {
         display: flex;
@@ -61,29 +71,30 @@ nav a:hover {
         margin: 0;
     }
 
-    /* nav ul li {
+    nav ul li {
         margin-left: 20px; /* Adjust spacing between menu items as needed */
+    }
 
-    main nav {
+    .images {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         gap: 10px;
         padding: 20px;
     }
-    
-    figure {
-        margin: 0;
-        text-align: center;
-    }
-    
-    figure img {
-        width: 100%;
-        height: auto;
-    }
-    
-    figcaption {
-        margin-top: 8px;
-        font-style: italic;
-    }
 }
 
+/* Figure styling */
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+}
+
+figcaption {
+    margin-top: 8px;
+    font-style: italic;
+}
