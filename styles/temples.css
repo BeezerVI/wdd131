@@ -1,6 +1,6 @@
 /* General styles */
 * {
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", "Lato";
     font-weight: 400;
 }
 
@@ -51,36 +51,13 @@ nav a:hover {
     color: blue;
 }
 
-/* Media query for larger screens */
-@media (min-width: 640px) {
-    nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    nav h1 {
-        margin: 0;
-        display: block;
-    }
-
-    nav ul {
-        display: flex;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    nav ul li {
-        margin-left: 20px; /* Adjust spacing between menu items as needed */
-    }
-
-    .images {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 10px;
-        padding: 20px;
-    }
+/* Hamburger button styles */
+#hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
 }
 
 /* Figure styling */
