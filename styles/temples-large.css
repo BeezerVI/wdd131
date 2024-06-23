@@ -1,11 +1,10 @@
 @media (max-width: 639px) {
     nav {
-        display: flex;
+        display: block;
     }
 
     #hamburger {
         display: block;
-        
     }
 
     nav ul {
