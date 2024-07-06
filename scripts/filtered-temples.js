@@ -81,6 +81,14 @@ const temples = [
         area: 9999,
         imageUrl:
         "https://churchofjesuschristtemples.org/assets/img/temples/port-vila-vanuatu-temple/port-vila-vanuatu-temple-19082-main.jpg"    
+    },
+    {
+        templeName: "Brisbane Australia Temple",
+        location: "Brisbane Australia, Kangaroo Point",
+        dedicated: "2001, May, 26",
+        area: 10700,
+        imageUrl:
+        "https://churchofjesuschristtemples.org/assets/img/temples/brisbane-australia-temple/brisbane-australia-temple-16557-main.jpg"    
     }
 ];
 
