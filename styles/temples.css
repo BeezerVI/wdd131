@@ -47,8 +47,8 @@ nav a {
     text-decoration: none;
 }
 
-nav a:hover {
-    color: blue;
+header nav ul li:hover {
+    text-decoration: underline;
 }
 
 /* Hamburger button styles */
