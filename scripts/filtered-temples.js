@@ -1,17 +1,13 @@
 
 document.addEventListener('DOMContentLoaded', function () {
-console.log('DOM fully loaded and parsed');
-const hamburger = document.getElementById('hamburger');
-const navUL = document.querySelector('nav ul');
+    console.log('DOM fully loaded and parsed');
+    const hamburger = document.getElementById('hamburger');
+    const navUL = document.querySelector('nav ul');
 
-hamburger.addEventListener('click', function () {
-    navUL.classList.toggle('show');
-    if (navUL.classList.contains('show')) {
-    hamburger.innerHTML = '&times;';
-    } else {
-    hamburger.innerHTML = '&#9776;';
-    }
-});
+    hamburger.addEventListener('click', function () {
+        navUL.classList.toggle('show');
+        hamburger.innerHTML = navUL.classList.contains('show') ? '&times;' : '&#9776;';
+    });
 
 const temples = [
     {
@@ -90,88 +86,63 @@ const temples = [
 
 createTempleCard(temples);
 
-// const oldLink = document.querySelector("#old");
-
-// oldLink.addEventListener("click", () => {
-//     createTempleCard(temples.filter(temple => temple.location.includes("Utah")));
-// });
-
-const oldLink = document.querySelector("#old");
-
-oldLink.addEventListener("click", () => {
+document.querySelector("#old").addEventListener("click", () => {
     createTempleCard(temples.filter(temple => {
         const [year] = temple.dedicated.split(',').map(str => str.trim());
         return parseInt(year) < 1900;
     }));
 });
 
-
-const newLink = document.querySelector("#new");
-
-newLink.addEventListener("click", () => {
+document.querySelector("#new").addEventListener("click", () => {
     createTempleCard(temples.filter(temple => {
         const [year] = temple.dedicated.split(',').map(str => str.trim());
         return parseInt(year) > 2000;
     }));
 });
 
-
-const largeLink = document.querySelector("#large");
-
-largeLink.addEventListener("click", () => {
-    createTempleCard(temples.filter(temple => {
-        return temple.area > 10000;
-    }));
+document.querySelector("#large").addEventListener("click", () => {
+    createTempleCard(temples.filter(temple => temple.area > 10000));
 });
 
-
-const smallLink = document.querySelector("#small");
-
-smallLink.addEventListener("click", () => {
-    createTempleCard(temples.filter(temple => {
-        return temple.area < 10000;
-    }));
+document.querySelector("#small").addEventListener("click", () => {
+    createTempleCard(temples.filter(temple => temple.area < 10000));
 });
 
-
-const homeLink = document.querySelector("#home");
-
-homeLink.addEventListener("click", () => {
+document.querySelector("#home").addEventListener("click", () => {
     createTempleCard(temples);
 });
-
 
 function createTempleCard(filteredTemples) {
     console.log('Creating filtered temple cards');
     document.querySelector(".images").innerHTML = "";
     filteredTemples.forEach(temple => {
-    let card = document.createElement("figure");
-    let img = document.createElement("img");
-    let location = document.createElement("p");
-    let dedication = document.createElement("p");
-    let area = document.createElement("p");
-    let name = document.createElement("figcaption");
+        let card = document.createElement("figure");
+        let img = document.createElement("img");
+        let location = document.createElement("p");
+        let dedication = document.createElement("p");
+        let area = document.createElement("p");
+        let name = document.createElement("figcaption");
 
-    name.textContent = temple.templeName;
-    location.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
-    dedication.innerHTML = `<span class="label">Dedicated:</span> ${temple.dedicated}`;
-    area.innerHTML = `<span class="label">Size:</span> ${temple.area} sq ft`;
-    img.setAttribute("src", temple.imageUrl);
-    img.setAttribute("alt", `${temple.templeName} Temple`);
-    img.setAttribute("loading", "lazy");
+        name.textContent = temple.templeName;
+        location.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
+        dedication.innerHTML = `<span class="label">Dedicated:</span> ${temple.dedicated}`;
+        area.innerHTML = `<span class="label">Size:</span> ${temple.area} sq ft`;
+        img.setAttribute("src", temple.imageUrl);
+        img.setAttribute("alt", `${temple.templeName} Temple`);
+        img.setAttribute("loading", "lazy");
 
-    card.appendChild(name);
-    card.appendChild(location);
-    card.appendChild(dedication);
-    card.appendChild(area);
-    card.appendChild(img);
+        card.appendChild(name);
+        card.appendChild(location);
+        card.appendChild(dedication);
+        card.appendChild(area);
+        card.appendChild(img);
 
-    const resGrid = document.querySelector(".images");
-    if (resGrid) {
-        resGrid.appendChild(card);
-    } else {
-        console.error('Cannot find .images element');
-    }
+        const resGrid = document.querySelector(".images");
+        if (resGrid) {
+            resGrid.appendChild(card);
+        } else {
+            console.error('Cannot find .images element');
+        }
     });
 }
 });
