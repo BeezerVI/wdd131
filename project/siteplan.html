@@ -7,6 +7,7 @@
     <meta name="description" content="A D&D dice roller to calculate any D&D dice">
     <meta name="author" content="Hyrum McKay">
     <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/getdates.js" defer></script>
     <script src="scripts/main.js" defer></script>
 </head>
 <body>
@@ -15,26 +16,33 @@
     </header>
 
     <main>
-        <section>
-            <h2>Dice Roller</h2>
-            <p>Content goes here...</p>
-        </section>
+        <div class="review-form">
+            <form method="get" id="review-form">
 
-        <section>
-            <h2>About</h2>
-            <p>More content goes here...</p>
-        </section>
+                <label><span>Dice Type</span></label>
+                <select name="dice-type" id="dice-type" required>
+                    <option value="">Choose a Dice ...</option>
+                    <option value="2">d2</option>
+                    <option value="4">d4</option>
+                    <option value="6">d6</option>
+                    <option value="8">d8</option>
+                    <option value="10">d10</option>
+                    <option value="12">d12</option>
+                    <option value="20">d20</option>
+                    <option value="100">d100</option>
+                </select>
+    
+                <label><span>How Many Dice?</span></label>
+                <input type="number" name="dice-number" value="1" required>
 
-        <figure>
-            <figcaption>This is the main wireframe for small view</figcaption>
-            <img src="images/wireframe.png" alt="Wireframe for small view">
-        </figure>
-        
-        <figure>
-            <figcaption>This is the main wireframe for big view or big screen view</figcaption>
-            <img src="images/Screenshot 2024-07-13 124757.png" alt="Wireframe for big view">
-        </figure>
+                <label><span>Modifiers</span></label>
+                <input type="number" name="modifier" value="0">
 
+                <button type="submit">Roll Dice</button>
+
+                
+            </form>
+        </div>
     </main>
 
     <footer>
