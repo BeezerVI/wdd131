@@ -7,42 +7,63 @@
     <meta name="description" content="A D&D dice roller to calculate any D&D dice">
     <meta name="author" content="Hyrum McKay">
     <link rel="stylesheet" href="styles/main.css">
-    <script src="scripts/getdates.js" defer></script>
     <script src="scripts/main.js" defer></script>
 </head>
 <body>
     <header>
         <h1>D&D Dice Roller</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="how-to-use.html">How to Use</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <div class="review-form">
-            <form method="get" id="review-form">
+        <section>
+            <h2>Site Plan</h2>
+            <h3>Site Name</h3>
+            <p>D&D Dice Roller</p>
+            <p>Reason: This name was for obvious reasons, mainly becuse this website porpus is to help calculate D&D dice</p>
 
-                <label><span>Dice Type</span></label>
-                <select name="dice-type" id="dice-type" required>
-                    <option value="">Choose a Dice ...</option>
-                    <option value="2">d2</option>
-                    <option value="4">d4</option>
-                    <option value="6">d6</option>
-                    <option value="8">d8</option>
-                    <option value="10">d10</option>
-                    <option value="12">d12</option>
-                    <option value="20">d20</option>
-                    <option value="100">d100</option>
-                </select>
-    
-                <label><span>How Many Dice?</span></label>
-                <input type="number" name="dice-number" value="1" required>
+            <h3>Site Purpose</h3>
+            <p>The purpose of the site is to offer a convenient and reliable online tool for rolling various types of dice used in D&D games.</p>
 
-                <label><span>Modifiers</span></label>
-                <input type="number" name="modifier" value="0">
+            <h3>Scenarios</h3>
+            <p>1. Scenario 1: A new D&D player wants to roll multiple dice at once, and needs a tool for it.</p>
+            <p>2. Scenario 2: An Dungeon Master (DM) needs to roll multiple dice simultaneously and wants to make shure the rolls are delt with quickly.</p>
 
-                <button type="submit">Roll Dice</button>
+            <h3>Color Schema</h3>
+            <p>Primary Color: #e0e0e0 (Light Gray) - Used for header and footer backgrounds.</p>
+            <p>Secondary Color: #f9f9f9 (Very Light Gray) - Used for the main content background.</p>
 
-                
-            </form>
-        </div>
+            <h3>Typography</h3>
+            <p>Font: Arial, sans-serif - Used for all text elements including headers, body text, and forms.</p>
+        </section>
+
+        <section>
+            <h2>Wireframes</h2>
+            <figure>
+                <figcaption>This is the main wireframe for small view</figcaption>
+                <img src="images/small-view.png" alt="Wireframe for small view">
+            </figure>
+            
+            <figure>
+                <figcaption>This is the main wireframe for big view or big screen view</figcaption>
+                <img src="images/big-view.png" alt="Wireframe for big view">
+            </figure>
+        </section>
+
+        <section>
+            <h2>Additional Pages</h2>
+            <h3>About Page</h3>
+            <p>The About page will provide information about this page WOW</p>
+
+            <h3>How to use page</h3>
+            <p>The "How to Use" page will help peaple who are new to D&D by explaing how to use this webpage</p>
+        </section>
     </main>
 
     <footer>
